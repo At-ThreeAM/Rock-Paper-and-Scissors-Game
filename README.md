@@ -1,83 +1,36 @@
-# Rock-Paper-and-Scissors-Game
+# Rock, Paper, Scissors Game in C
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+This is a simple implementation of the classic Rock, Paper, Scissors game in the C programming language.
 
-#define ROCK 0
-#define PAPER 1
-#define SCISSORS 2
+## How to Play
 
-int generateComputerChoice() {
-    // Generate a random number between 0 and 2
-    return rand() % 3;
-}
+1. Clone the repository or download the source code.
+2. Compile the source code using a C compiler (e.g., GCC).
+3. Run the compiled executable.
+4. Follow the on-screen instructions to play the game.
 
-int determineWinner(int playerChoice, int computerChoice) {
-    // Returns 1 if the player wins, -1 if the computer wins, and 0 for a tie
+## Features
 
-    if ((playerChoice == ROCK && computerChoice == SCISSORS) ||
-        (playerChoice == PAPER && computerChoice == ROCK) ||
-        (playerChoice == SCISSORS && computerChoice == PAPER)) {
-        return 1;
-    } else if (playerChoice == computerChoice) {
-        return 0;
-    } else {
-        return -1;
-    }
-}
+- Player vs. Computer gameplay.
+- Randomized computer choices.
+- Simple text-based user interface.
 
-void printChoice(int choice) {
-    switch (choice) {
-        case ROCK:
-            printf("Rock");
-            break;
-        case PAPER:
-            printf("Paper");
-            break;
-        case SCISSORS:
-            printf("Scissors");
-            break;
-    }
-}
+## Requirements
 
-int main() {
-    int playerChoice, computerChoice;
-    int result;
+- C compiler (e.g., GCC)
 
-    srand(time(NULL));  // Initialize random seed
+## Usage
 
-    printf("Welcome to Rock, Paper, Scissors!\n");
-    printf("Enter your choice:\n");
-    printf("0 - Rock\n");
-    printf("1 - Paper\n");
-    printf("2 - Scissors\n");
-    scanf("%d", &playerChoice);
+```bash
+gcc -o rps_game rps_game.c
+./rps_game
 
-    if (playerChoice < 0 || playerChoice > 2) {
-        printf("Invalid choice! Please enter a number between 0 and 2.\n");
-        return 1;
-    }
 
-    computerChoice = generateComputerChoice();
+Future Improvements 😒😒
+Adding a graphical user interface (GUI).
+Implementing multiplayer mode.
+Adding more advanced gameplay options (e.g., Rock, Paper, Scissors, Lizard, Spock).
 
-    printf("You chose: ");
-    printChoice(playerChoice);
-    printf("\n");
+Contributing 😍😍
+Contributions are welcome! If you have any ideas for improvements or find any bugs, feel free to open an issue or submit a pull request.
 
-    printf("Computer chose: ");
-    printChoice(computerChoice);
-    printf("\n");
-
-    result = determineWinner(playerChoice, computerChoice);
-
-    if (result == 1) {
-        printf("Congratulations! You win!\n");
-    } else if (result == -1) {
-        printf("Sorry! Computer wins!\n");
-    } else {
-        printf("It's a tie!\n");
-    }
-
-    return 0;
-}
