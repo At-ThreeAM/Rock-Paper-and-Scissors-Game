@@ -27,20 +27,3 @@ gcc -o rps_game rps_game.c
 
 
 
-Future Improvements
-Adding a graphical user interface (GUI).
-Implementing multiplayer mode.
-Adding more advanced gameplay options (e.g., Rock, Paper, Scissors, Lizard, Spock).
-Contributing
-Contributions are welcome! If you have any ideas for improvements or find any bugs, feel free to open an issue or submit a pull request.
-
-## Future Improvements 😒😒
-
-Adding a graphical user interface (GUI).
-Implementing multiplayer mode.
-Adding more advanced gameplay options (e.g., Rock, Paper, Scissors, Lizard, Spock).
-
-## Contributing 😍😍
-
-Contributions are welcome! If you have any ideas for improvements or find any bugs, feel free to open an issue or submit a pull request.
-
